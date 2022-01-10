@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import * as data from '../data.json';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { reviewList } from '../Review.model';
 
 @Component({
@@ -9,6 +11,7 @@ import { reviewList } from '../Review.model';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent  implements OnInit {
+
   PRODUCTS: any = (data as any).default;
   selectedProduct! : any;
   name: any;

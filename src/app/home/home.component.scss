@@ -58,14 +58,44 @@ a{
       border: 1px solid #FF423F;
     }
 
-
-
     .bg-Ascending{
       background-color: #F8F5FF;
       color: #6F59B4;
       font-weight: 500;
       border: 1px solid #6F59B4;
       font-size: 11px;
+    }
+
+    .price-Descending{
+      background-color: #FCF0EB;
+      color: #FF423F;
+      font-weight: 500;
+      font-size: 11px;
+      border: 1px solid #FF423F;
+    }
+
+    .price-A{
+      font-size: 18px;
+      color: #4183BC;
+      font-weight: 500;
+    }
+
+    .price-D{
+      font-size: 18px;
+      color: #FF423F;
+      font-weight: 500;
+    }
+
+    .name-A{
+      font-size: 18px;
+      color: #6F59B4;
+      font-weight: 500;
+    }
+
+    .name-D{
+      font-size: 18px;
+      color: #FF423F;
+      font-weight: 500;
     }
 
     .avail-status{

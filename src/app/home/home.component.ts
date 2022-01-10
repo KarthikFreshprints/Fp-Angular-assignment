@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import * as data from '../data.json';
+
 import { Router } from '@angular/router';
 import { OrderPipe } from 'ngx-order-pipe';
 
@@ -52,7 +54,7 @@ export class HomeComponent implements OnInit {
   }
 
   // This function Sorts product price in ascending order
-  sortPrice(value: string) {
+  sortPriceA(value: string) {
     if (this.order === value) {
       this.reverse = false;
     }
@@ -60,15 +62,23 @@ export class HomeComponent implements OnInit {
     this.order = value;
   }
 
+    // This function Sorts product price in ascending order
+    sortPriceD(value: string) {
+      if (this.order === value) {
+        this.reverse = true;
+      }
+
+      this.order = value;
+    }
+
   // This function Sorts product list by search on input field
   onSearch(event: any) {
     this.PRODUCTS = this.allProducts.filter((product: any) => {
       return product['name'].toLowerCase().includes(event.target.value.toLowerCase())
+    });
+    this.PRODUCTS = this.allProducts.filter((product: any) => {
+      return product['description'].toLowerCase().includes(event.target.value.toLowerCase())
     })
   }
-
-
-
-
 
 }

@@ -22,11 +22,16 @@
                 </div>
               </div>
             <!-- sort buttons -->
-              <div class="row mt-4">
+            <label class="label mt-2 mb-1">Filters</label>
+              <div class="row">
                 <div class="col-xs-12 d-flex flex-row align-items-center">
-                  <a [class.active]="price === 'price'" (click)="sortPrice('price')"><span class="badge rounded-pill bg-price py-2 px-3 me-4">Sort by price</span></a>
-                  <a [class.active]="order === 'name'" (click)="setAscending('name')"><span class="badge rounded-pill bg-Ascending py-2 px-3 me-4">Order by Ascending</span></a>
-                  <a [class.active]="order === 'name'" (click)="setDescending('name')"><span class="badge rounded-pill bg-Descending py-2 px-3">Order by Descending</span></a>
+                  <a (click)="sortPriceA('price')"><span class="badge rounded-pill bg-price py-2 px-3 me-4 d-flex flex-row align-items-center justify-content-center">Price <span aria-hidden="false" class="price-A material-icons ms-1" aria-label="Example music_note icon">expand_less</span></span></a>
+
+                  <a (click)="sortPriceD('price')"><span class="badge rounded-pill price-Descending py-2 px-3 me-4 d-flex flex-row align-items-center justify-content-center">Price <span aria-hidden="false" class="price-D material-icons ms-1" aria-label="Example music_note icon">expand_more</span></span></a>
+
+                  <a (click)="setAscending('name')"><span class="badge rounded-pill bg-Ascending py-2 px-3 me-4 d-flex flex-row align-items-center justify-content-center">Name <span aria-hidden="false" class="name-A material-icons ms-1" aria-label="Example music_note icon">expand_less</span></span></a>
+
+                  <a (click)="setDescending('name')"><span class="badge rounded-pill bg-Descending py-2 px-3 d-flex flex-row align-items-center justify-content-center">Name <span aria-hidden="false" class="name-D material-icons ms-1" aria-label="Example music_note icon">expand_more</span></span></a>
                 </div>
               </div>
             <!-- no. of Guitars -->
@@ -38,8 +43,8 @@
                 <div class="col-xs-12">
                   <div *ngIf="PRODUCTS.length > 0; else noProd" class="card p-2 product-list-body">
                     <div class="card-body">
-                        <!-- prod list -->
-                        <div class="row" *ngFor="let product of PRODUCTS | orderBy: order:reverse:caseInsensitive ">
+                        <!-- prod list "-->
+                        <div class="row" *ngFor="let product of PRODUCTS | orderBy: order:reverse:caseInsensitive">
                          <a (click)="onselectProduct(product)"> <div class="card p-3 product-body mt-3">
                             <div class="card-body">
                                 <span aria-hidden="false" class="star material-icons" aria-label="Example music_note icon">chevron_right</span>
@@ -55,7 +60,7 @@
                                         </div>
                                         <div class="row">
                                           <div class="col-3">
-                                            <span class="badge h6 bg-price py-2 px-3">Price revised on | 05/14 ${{product.price}}</span>
+                                            <span class="badge h6 bg-price py-2 px-3">Price revised on : 05/14 | ${{product.price}}</span>
                                           </div>
                                         </div>
                                         <div class="row mt-2">

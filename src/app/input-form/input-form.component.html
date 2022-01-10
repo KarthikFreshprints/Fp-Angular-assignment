@@ -10,7 +10,14 @@
               <form class="d-flex flex-row align-items-center justify-content-between" [formGroup]="reviewForm" (ngSubmit)="onReview()">
                 <input type="text" [(ngModel)]="title" formControlName="title" placeholder="name" name="body" id="body" class="form-control me-1">
                 <input type="text" [(ngModel)]="reviews" formControlName="body" placeholder="Review" name="body" id="body" class="form-control me-1">
-                <input type="number" [(ngModel)]="rating" formControlName="rate" placeholder="Rating out of 5" name="body" id="body" class="form-control me-1">
+                <select name="rating" id="rate" [(ngModel)]="rating" formControlName="rate" class="form-control me-1">
+                  <option class="select" value="1">1</option>
+                  <option class="select" value="2">2</option>
+                  <option class="select" value="3">3</option>
+                  <option class="select" value="4">4</option>
+                  <option class="select" value="5">5</option>
+                </select>
+                <!-- <input type="select" [(ngModel)]="rating" formControlName="rate" placeholder="Rating out of 5" name="body" id="body" class="form-control me-1"> -->
                 <button class="btn btn-add-rev" [disabled]="reviewForm.invalid">Add</button>
               </form>
             </div>
