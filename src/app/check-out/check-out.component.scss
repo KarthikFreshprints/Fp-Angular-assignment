@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.shop_body{
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.07);
+  height: 550px;
+  overflow: hidden;
+  position: relative;
+
+    .shop_title{
+      font-size: 18px;
+      color: #404040;
+    }
+
+    .music_note{
+      font-size: 20px;
+      color: #404040;
+    }
+
+    .img{
+      height: 120px;
+      width: 120px;
+      transition: all 1s;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+    }
+
+    .page-title{
+      color: #404040;
+    }
+
+    .bg-price{
+      background-color: #a1f5dc;
+      font-size: 12px;
+      font-weight: 500;
+      color: #3E8E7E;
+    }
+
+    .prod-name{
+      color: #404040;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .prod-dec-title{
+      color: #404040;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .prod-des{
+      color: #8f8f8f;
+      font-size: 13px;
+    }
+
+    .bg-Ascending{
+      background-color: #F8F5FF;
+      color: #6F59B4;
+      font-weight: 500;
+      border: 1px solid #6F59B4;
+      font-size: 15px;
+    }
+
+    .star{
+      columns: #6F59B4;
+      font-size: 15px;
+    }
+
+    .back{
+      position: absolute;
+      bottom: 20px;
+    }
+
+    .bg-Descending{
+      background-color: #FCF0EB;
+      color: #FF423F;
+      font-weight: 500;
+      font-size: 11px;
+      border: 1px solid #FF423F;
+    }
+
+
+}

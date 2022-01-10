@@ -1,0 +1,49 @@
+<div class="container-fluid p-4">
+  <div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-xs-8 mx-auto my-auto">
+        <div class="card p-3 shop_body rounded">
+          <div class="card-body">
+            <!-- shop title -->
+              <div class="row mb-2">
+                <div class="col-xs-12 d-flex flex-row align-items-center justify-content-center">
+                  <span class="h6 shop_title">Offshore Guitar store</span><span aria-hidden="false" class="music_note material-icons ms-1" aria-label="Example music_note icon">music_note</span>
+                </div>
+              </div>
+
+              <hr>
+              <div class="row mt-2">
+                <p class="page-title h6">Checkout</p>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-3">
+                  <img [src]="selectedProduct.imagePath" class="img-fluid rounded img ms-3" [alt]="selectedProduct.name">
+                </div>
+                <div class="col-9">
+                  <div class="row">
+                    <div class="col-12 d-flex flex-row justify-content-between align-items-center">
+                      <p class="prod-name"> {{selectedProduct.name}} </p> <span class="me-3 badge bg-price p-2"> ${{selectedProduct.price}} </span>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <p class="prod-dec-title">Product description</p>
+                    <p class="prod-des"> {{selectedProduct.description}} Price revised on: 05/14 </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <span class="badge bg-Ascending py-2 px-3 me-4 d-flex flex-row align-items-center justify-content-center"><span aria-hidden="false" class="star material-icons me-2" aria-label="Example music_note icon">auto_awesome</span> Thanks for shoping with us. You have ordered a {{selectedProduct.name}}.</span>
+              </div>
+
+              <div class="row back">
+                <a class="badge rounded-pill bg-Descending py-2 px-3" [routerLink]="'/home'">Back to search</a>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+

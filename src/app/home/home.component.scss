@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.shop_body{
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.07);
+  height: 550px;
+  overflow: hidden;
+
+    .shop_title{
+      font-size: 18px;
+      color: #404040;
+    }
+
+    .music_note{
+      font-size: 20px;
+      color: #404040;
+    }
+
+    .label{
+      color: #8f8f8f;
+      font-size: 12px;
+    }
+
+    .input{
+      border: 1px solid #EEF2FF;
+      transition:all 1s;
+}
+
+    input:focus{
+      box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.07);
+      background-color: #EEF2FF;
+      border: 1px solid #d3ddff;
+    }
+
+    .bg-price{
+      background-color: #ECF6FF;
+      color: #4183BC;
+      font-weight: 500;
+      border: 1px solid #4183BC;
+      font-size: 11px;
+    }
+
+    .bg-Descending{
+      background-color: #FCF0EB;
+      color: #FF423F;
+      font-weight: 500;
+      font-size: 11px;
+      border: 1px solid #FF423F;
+    }
+
+
+
+    .bg-Ascending{
+      background-color: #F8F5FF;
+      color: #6F59B4;
+      font-weight: 500;
+      border: 1px solid #6F59B4;
+      font-size: 11px;
+    }
+
+    .avail-status{
+      color: #8f8f8f;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+      .product-list-body{
+        height: 300px;
+        overflow-y: scroll;
+        border: none;
+        background-color: white;
+
+          .product-body{
+            border: none;
+            background-color: white;
+            border-left: 4px solid #6F59B4;
+            transition: all 1s;
+            position: relative;
+            cursor: pointer;
+
+            .star{
+              position: absolute;
+              top: 15px;
+              right: 15px;
+              color: #404040;
+              z-index: 100;
+            }
+
+            .bg-price{
+              background-color: #a1f5dc;
+              font-size: 12px;
+              color: #3E8E7E;
+              border: 1px solid #3E8E7E;
+            }
+
+
+
+            .Guitar-title{
+              color: #404040;
+              font-size: 16px;
+              font-weight: 500;
+            }
+
+            .Guitar-des{
+              color: #8f8f8f;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+
+          .product-body:hover{
+            box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.07);
+          }
+
+      }
+
+      .bg-err{
+        background-color: #ECF6FF;
+        color: #4183BC;
+        font-weight: 500;
+        border: 1px solid #4183BC;
+        font-size: 14px;
+      }
+
+      .product-list-body::-webkit-scrollbar{
+        display: none;
+      }
+}
+
+

@@ -1,0 +1,81 @@
+<div class="container-fluid p-4">
+  <div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-xs-8 mx-auto my-auto">
+        <div class="card p-3 shop_body rounded">
+          <div class="card-body">
+            <!-- shop title -->
+              <div class="row mb-2">
+                <div class="col-xs-12 d-flex flex-row align-items-center justify-content-center">
+                  <span class="h6 shop_title">Offshore Guitar store</span><span aria-hidden="false" class="music_note material-icons ms-1" aria-label="Example music_note icon">music_note</span>
+                </div>
+              </div>
+
+              <hr>
+            <!-- Search field -->
+              <div class="row mt-2">
+                <div class="col-6">
+                  <!-- form -->
+                  <form>
+                      <label class="label"> Search Guitar</label>
+                      <input type="text" (input)="onSearch($event)" placeholder="For eg: Electric guitar" class="input form-control p-2">
+                  </form>
+                </div>
+              </div>
+            <!-- sort buttons -->
+              <div class="row mt-4">
+                <div class="col-xs-12 d-flex flex-row align-items-center">
+                  <a [class.active]="price === 'price'" (click)="sortPrice('price')"><span class="badge rounded-pill bg-price py-2 px-3 me-4">Sort by price</span></a>
+                  <a [class.active]="order === 'name'" (click)="setAscending('name')"><span class="badge rounded-pill bg-Ascending py-2 px-3 me-4">Order by Ascending</span></a>
+                  <a [class.active]="order === 'name'" (click)="setDescending('name')"><span class="badge rounded-pill bg-Descending py-2 px-3">Order by Descending</span></a>
+                </div>
+              </div>
+            <!-- no. of Guitars -->
+              <div class="row mt-4">
+                <p class="avail-status">There are currently 4 guitars in store.</p>
+              </div>
+            <!-- product list body -->
+              <div class="row">
+                <div class="col-xs-12">
+                  <div *ngIf="products.length > 0; else noProd" class="card p-2 product-list-body">
+                    <div class="card-body">
+                        <!-- prod list -->
+                        <div class="row" *ngFor="let product of products | orderBy: order:reverse:caseInsensitive ">
+                         <a (click)="onselectProduct(product)"> <div class="card p-3 product-body mt-3">
+                            <div class="card-body">
+                                <span aria-hidden="false" class="star material-icons" aria-label="Example music_note icon">chevron_right</span>
+                                  <div class="row" >
+                                    <!-- product image -->
+                                      <div class="col-3">
+                                        <img [src]="product.imagePath" alt="guitar" style="height: 100p; width: 100px;" class="img-fluid">
+                                      </div>
+                                      <!-- product info -->
+                                      <div class="col-9">
+                                        <div class="row">
+                                          <p class="Guitar-title">{{product.name }}</p>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-3">
+                                            <span class="badge h6 bg-price py-2 px-3">Price revised on | 05/14 ${{product.price}}</span>
+                                          </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                          <p class="Guitar-des">{{product.description}}</p>
+                                        </div>
+                                      </div>
+                                  </div>
+                            </div>
+                          </div> </a>
+                        </div>
+                    </div>
+                  </div>
+                  <ng-template #noProd>
+                   <p class="mt-5 text-center bg-err py-2 px-3">"Sorry no products found"</p>
+                  </ng-template>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+

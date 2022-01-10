@@ -1,0 +1,21 @@
+<div class="row input-row">
+  <div class="col-12">
+      <button (click)="showInput()" class="btn btn-add d-flex flex-row align-items-center justify-content-center p-2" ><span aria-hidden="false" class="send material-icons" aria-label="Example music_note icon">add</span></button>
+
+      <div *ngIf="Show" class="card p-3 review-card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+              <a (click)="onClose()" class="btn-close p-2 d-flex flex-row align-items-center justify-content-center"> <span aria-hidden="false" class="close material-icons" aria-label="Example music_note icon">close</span></a>
+              <form class="d-flex flex-row align-items-center justify-content-between" [formGroup]="reviewForm" (ngSubmit)="onReview()">
+                <input type="text" [(ngModel)]="title" formControlName="title" placeholder="name" name="body" id="body" class="form-control me-1">
+                <input type="text" [(ngModel)]="reviews" formControlName="body" placeholder="Review" name="body" id="body" class="form-control me-1">
+                <input type="number" [(ngModel)]="rating" formControlName="rate" placeholder="Rating out of 5" name="body" id="body" class="form-control me-1">
+                <button class="btn btn-add-rev" [disabled]="reviewForm.invalid">Add</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

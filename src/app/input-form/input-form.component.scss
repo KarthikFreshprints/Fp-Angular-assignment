@@ -1,0 +1,80 @@
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+.input-card{
+  border-radius: 10px;
+  border: 1px solid #ECF6FF;
+}
+
+.input-row{
+  position: absolute;
+  bottom: 0px;
+  width: 605px;
+}
+
+.btn-add{
+  background-color: #c5e4ff;
+  border: none;
+  border-radius: 50%;
+}
+
+.send{
+  color: #3e7bb1;
+}
+
+.btn-add-rev{
+  background-color: #3e7bb1;
+  color: white;
+}
+
+.btn-close{
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.close{
+  color: #404040;
+  font-size: 13px;
+}
+
+.review-card{
+  z-index: 100;
+  position: absolute;
+  top: -35px;
+  left: 60px;
+  width: 500px;
+  height: 100px;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.07);
+  border: none;
+}
+
+.input-row{
+  position: relative;
+
+  .review-form{
+    border: none;
+  }
+
+  .review-form:focus{
+    box-shadow: none;
+    border: none;
+  }
+
+  .form-control{
+    box-shadow: none;
+    border: 1px solid #3e7bb1;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

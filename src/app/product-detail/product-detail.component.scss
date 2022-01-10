@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+}
+
+.btn:focus{
+  border: none;
+  box-shadow: none;
+}
+
+.shop_body{
+  border: 1px solid #ececec;
+  background: #FFFFFF;
+  // box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.07);
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+
+  .des-card{
+    height: 350px;
+    border: none;
+    position: relative;
+    .bg-Description, .bg-Spec, .bg-Review{
+      font-size: 12px;
+      background-color: #ECF6FF;
+      color: #4183BC;
+      font-weight: 500;
+    }
+
+    .des-body-wrapper{
+      border: none;
+      overflow: hidden;
+      height: 200px;
+      width: 570px;
+    }
+
+    .Guitar-des-long{
+      color: #8f8f8f;
+      font-size: 13px;
+    }
+
+    .des-body-wrapper-rev{
+      border: none;
+    }
+
+    .bg-body-name{
+      color: #404040;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .bg-rate{
+      background-color: #F8F5FF;
+      color: #6F59B4;
+      font-weight: 500;
+      border: 1px solid #6F59B4;
+    }
+
+    .bg-body-review{
+      color: #8f8f8f;
+      font-size: 13px;
+    }
+
+    .des-detail-card{
+      height: 220px;
+      overflow: hidden;
+      overflow-y: scroll;
+      border: none;
+    }
+
+    .des-detail-card::-webkit-scrollbar{
+      display: none;
+    }
+
+    .input-card{
+      border-radius: 10px;
+      border: 1px solid #ECF6FF;
+    }
+
+    .input-row{
+      position: absolute;
+      bottom: 0px;
+      width: 605px;
+    }
+
+    .btn-send{
+      background-color: white;
+      border: none;
+    }
+
+    .send{
+      color: #404040;
+    }
+
+  }
+
+  .input-row{
+    position: absolute;
+    bottom: 0px;
+
+    .review-form{
+      border: none;
+    }
+
+    .review-form:focus{
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+    .shop_title{
+      font-size: 18px;
+      color: #404040;
+    }
+
+    .prod-info{
+        border: none;
+        position: relative;
+        box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.07);
+        z-index: 100;
+
+      .music_note{
+        font-size: 20px;
+        color: #404040;
+      }
+
+      .bg-price{
+        background-color: #a1f5dc;
+        font-size: 12px;
+        font-weight: 500;
+        color: #3E8E7E;
+      }
+
+      .Guitar-title{
+        color: #404040;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .Guitar-des-title{
+        color: #404040;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .Guitar-des{
+        color: #8f8f8f;
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+
+
+    .button-row{
+      position: absolute;
+      top: 180px;
+      width: 665px;
+      left: 50px;
+    }
+
+    .btn-action{
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #404040;
+    }
+    .action{
+      color: #404040;
+      font-size: 14px;
+    }
+
+    .bg-checkout{
+      background-color: #f8f8f8;
+      color: #404040;
+      border: 1px solid #404040;
+}
+
+
+}
