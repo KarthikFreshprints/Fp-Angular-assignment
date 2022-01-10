@@ -130,7 +130,7 @@
               <!-- action buttons -->
               <div class="row button-row">
                 <div class="col-10 d-flex flex-row justify-content-between">
-                   <button [disabled]="!products[selectedProductIndex - 1]" class="btn btn-action p-2" (click)="onPre()"><span aria-hidden="false" class="action material-icons" aria-label="Example music_note icon">arrow_back_ios_new</span></button> <button class="btn btn-action p-2" [disabled]="!products[selectedProductIndex + 1]" (click)="onNext()"><span aria-hidden="false" class="action material-icons" aria-label="Example music_note icon">arrow_forward_ios</span></button>
+                   <button [disabled]="!PRODUCTS[selectedProductIndex - 1]" class="btn btn-action p-2" (click)="onPre()"><span aria-hidden="false" class="action material-icons" aria-label="Example music_note icon">arrow_back_ios_new</span></button> <button class="btn btn-action p-2" [disabled]="!PRODUCTS[selectedProductIndex + 1]" (click)="onNext()"><span aria-hidden="false" class="action material-icons" aria-label="Example music_note icon">arrow_forward_ios</span></button>
                 </div>
               </div>
               <!-- checkout -->

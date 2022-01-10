@@ -8,23 +8,24 @@ import { reviewList } from '../Review.model';
   styleUrls: ['./input-form.component.scss']
 })
 export class InputFormComponent implements OnInit {
+  // Ng model declaations
   title="";
   reviews="";
   rating="";
-  constructor() { }
-  Show = false;
 
+  constructor() { }
+
+  // this property used to open & close review dialog
+  showCard = false;
+
+  // Custom event using output and eventEmitter to emit data
   @Output() Review = new EventEmitter<any>();
 
-    // Reactive Form
-    reviewForm! : FormGroup;
-
-    // get method for controls
-    get g(){
-      return this.reviewForm.controls
-    }
+  // Reactive Form
+  reviewForm! : FormGroup;
 
   ngOnInit(): void {
+    // Form validation
     this.reviewForm = new FormGroup({
       'title' : new FormControl(null, Validators.required),
       'body' : new FormControl(null, Validators.required),
@@ -32,6 +33,7 @@ export class InputFormComponent implements OnInit {
     })
   }
 
+  // This function submits the form and passes data using emit function
   onReview(){
     const review:reviewList  = {
       title : this.title,
@@ -43,12 +45,14 @@ export class InputFormComponent implements OnInit {
     this.reviewForm.reset();
   }
 
+  // this Opens the review card
   showInput(){
-    this.Show = true;
+    this.showCard = true;
   }
 
+  // this Closes the review card
   onClose(){
-    this.Show = false;
+    this.showCard = false;
   }
 
 }

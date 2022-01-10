@@ -8,26 +8,28 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./check-out.component.scss']
 })
 export class CheckOutComponent implements OnInit {
-  products: any = (data as any).default;
+  PRODUCTS: any = (data as any).default;
   selectedProduct! : any;
   name: any;
   selectedProductIndex:any;
+
   constructor(private activatedRoute: ActivatedRoute ) { }
 
+  // this loads the selected product with param 'name'
   ngOnInit(): void {
     this.loadProd()
   }
 
+  // Function uses activated route and snapshot property to get the param of the single product
   loadProd(){
     this.name = this.activatedRoute.snapshot.params['name'];
-    this.products.forEach((product: any, index: any) => {
+    this.PRODUCTS.forEach((product: any, index: any) => {
 
        if (product.name === this.name) {
          this.selectedProduct = product,
          this.selectedProductIndex = index
        }
      })
-    //  console.log(this.selectedProduct)
   }
 
 }

@@ -36,10 +36,10 @@
             <!-- product list body -->
               <div class="row">
                 <div class="col-xs-12">
-                  <div *ngIf="products.length > 0; else noProd" class="card p-2 product-list-body">
+                  <div *ngIf="PRODUCTS.length > 0; else noProd" class="card p-2 product-list-body">
                     <div class="card-body">
                         <!-- prod list -->
-                        <div class="row" *ngFor="let product of products | orderBy: order:reverse:caseInsensitive ">
+                        <div class="row" *ngFor="let product of PRODUCTS | orderBy: order:reverse:caseInsensitive ">
                          <a (click)="onselectProduct(product)"> <div class="card p-3 product-body mt-3">
                             <div class="card-body">
                                 <span aria-hidden="false" class="star material-icons" aria-label="Example music_note icon">chevron_right</span>
